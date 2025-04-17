@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>English</string>
+    <key>CFBundleDocumentTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>MDImporter</string>
+            <key>LSItemContentTypes</key>
+            <array>
+                <string>com.apple.mach-o-binary</string>
+                <string>com.apple.mach-o-bundle</string>
+                <string>com.apple.mach-o-core</string>
+                <string>com.apple.mach-o-dylib</string>
+                <string>com.apple.mach-o-executable</string>
+                <string>com.apple.mach-o-object</string>
+                <string>com.apple.x11-mach-o-executable</string>
+                <string>com.microsoft.windows-dynamic-link-library</string>
+                <string>com.microsoft.windows-executable</string>
+                <string>cx.c3.ar-archive</string>
+                <string>public.elf-binary</string>
+                <string>public.object-code</string>
+                <string>public.unix-executable</string>
+            </array>
+        </dict>
+    </array>
+    <key>CFBundleExecutable</key>
+    <string>spotbin</string>
+    <key>CFBundleIconFile</key>
+    <string></string>
+    <key>CFBundleIdentifier</key>
+    <string>vin.je.spotbin</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundlePackageType</key>
+    <string>BNDL</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>CFPlugInDynamicRegisterFunction</key>
+    <string></string>
+    <key>CFPlugInDynamicRegistration</key>
+    <string>NO</string>
+    <key>CFPlugInFactories</key>
+    <dict>
+        <key>9336D6DB-18F0-4615-89E4-7A1234BDAA7B</key>
+        <string>MetadataImporterPluginFactory</string>
+    </dict>
+    <key>CFPlugInTypes</key>
+    <dict>
+        <key>8B08C4BF-415B-11D8-B3F9-0003936726FC</key>
+        <array>
+            <string>9336D6DB-18F0-4615-89E4-7A1234BDAA7B</string>
+        </array>
+    </dict>
+    <key>CFPlugInUnloadFunction</key>
+    <string></string>
+</dict>
+</plist>

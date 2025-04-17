@@ -1,4 +1,7 @@
 use crate::commands::Dump;
+use objc2_core_foundation::{
+    CFRetained, CFUUID, CFUUIDGetConstantUUIDWithBytes, kCFAllocatorSystemDefault,
+};
 use object::read::archive::ArchiveFile;
 use object::read::coff;
 use object::read::macho::{DyldCache, FatArch, MachOFatFile32, MachOFatFile64};
@@ -8,6 +11,58 @@ use std::io;
 use std::io::prelude::*;
 use std::io::{Result, Write};
 use std::vec::Vec;
+
+const PLUGIN_UUID: &str = "8AED83B3-C412-11D8-85A3-000393D59866";
+
+fn IUnknownUUID() -> CFRetained<CFUUID> {
+    unsafe {
+        CFUUIDGetConstantUUIDWithBytes(
+            kCFAllocatorSystemDefault,
+            0x00,
+            0x00,
+            0x00,
+            0x00,
+            0x00,
+            0x00,
+            0x00,
+            0x00,
+            0xC0,
+            0x00,
+            0x00,
+            0x00,
+            0x00,
+            0x00,
+            0x00,
+            0x46,
+        )
+        .unwrap()
+    }
+}
+
+fn PluginUUID() -> CFRetained<CFUUID> {
+    unsafe {
+        CFUUIDGetConstantUUIDWithBytes(
+            kCFAllocatorSystemDefault,
+            0xfc,
+            0x09,
+            0x57,
+            0xc6,
+            0x10,
+            0xa1,
+            0x46,
+            0x9b,
+            0xaa,
+            0x54,
+            0x5a,
+            0x9f,
+            0xfe,
+            0x71,
+            0x8a,
+            0x93,
+        )
+        .unwrap()
+    }
+}
 
 pub fn print<W: Write, E: Write>(
     w: &mut W,
@@ -298,4 +353,9 @@ pub fn dump(opts: Dump) {
     f.read_to_end(&mut fbytes).unwrap();
     let res = dump_object(&mut io::stdout(), &mut io::stderr(), fbytes.as_slice());
     println!("res: {res:#?}");
+    let iunknown_uuid = IUnknownUUID();
+    println!("IUnknownUUID: {iunknown_uuid:#?}");
+    let plugin_uuid = PluginUUID();
+    println!("plugin_uuid: {plugin_uuid:#?}");
+    let f = CTFontCreateWithQuickdrawInstance();
 }

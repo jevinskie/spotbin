@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  version="1.0"
+  xmlns="http://www.apple.com/metadata"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.apple.com/metadata
+file:///System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Resources/MetadataSchema.xsd"
+>
+  <note
+    >Custom attributes that this metadata importer supports. Below is an example
+    of a multivalued string attribute. Other types are CFNumber, CFDate,
+    CFBoolean and CFData.</note
+  >
+  <attributes>
+    <attribute name="vin_je_exports" uniqued="true" multivalued="true" type="CFString" />
+  </attributes>
+  <types>
+    <type name="com.apple.mach-o-binary">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+      <type name="com.apple.mach-o-bundle">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+      <type name="com.apple.mach-o-core">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+      <type name="com.apple.mach-o-dylib">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+      <type name="com.apple.mach-o-executable">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+      <type name="com.apple.mach-o-object">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+      <type name="com.apple.x11-mach-o-executable">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+      <type name="com.microsoft.windows-dynamic-link-library">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+      <type name="com.microsoft.windows-executable">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+      <type name="cx.c3.ar-archive">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+      <type name="public.elf-binary">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+      <type name="public.object-code">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+      <type name="public.unix-executable">
+        <allattrs>vin_je_exports</allattrs>
+        <displayattrs>vin_je_exports</displayattrs>
+      </type>
+  </types>
+</schema>
